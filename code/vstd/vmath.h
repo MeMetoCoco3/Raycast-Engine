@@ -6,8 +6,9 @@
 #include "vtypes.h"
 
 //constexpr f64 PI = 3.14159265359;
+#define HALF_PI PI * 0.5
 #define TO_DEGREE(x) (x * (180/PI))
-#define TO_RADIAN(x) (x * (PI/180));
+#define TO_RADIAN(x) (x * (PI/180))
 vec2 Vec2Subs(vec2 v1, vec2 v2);
 vec2 Vec2Add(vec2 v1, vec2 v2);
 vec2 Vec2AddScalar(vec2 v, f32 s);

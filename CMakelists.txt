@@ -28,6 +28,7 @@ target_include_directories(imgui PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/raylib/src/external/glfw/include
 )
 
+target_compile_definitions("${CMAKE_PROJECT_NAME}" PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/assets/")
 
 target_include_directories(RAYCAST PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/dependencies/include/")
 target_link_libraries(RAYCAST PRIVATE raylib imgui)
