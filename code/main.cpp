@@ -214,10 +214,10 @@ void DrawScreen()
 		f32 CorrectedDistance = ColInfo.DistanceToCollision * cos(CurrentAngle - PlayerDirRadians);
 		f32 WallHeight = (GRID_SIZE / CorrectedDistance) * DISTANCE_TO_PROJ_PLANE;
 	
-		i32 TextureIndex = 1 + ColInfo.TextureIndex;
 		f32 StartY = (SCR_HEIGHT - WallHeight) / 2;
 		f32 TextureY = 0.0f;
 		f32 TextureYStep = GRID_SIZE / WallHeight;
+		i32 TextureIndex = ColInfo.TextureIndex - 1;
 		int TextureWidth = Context.Images[TextureIndex].width;
 		for (int y = StartY; y <= StartY + WallHeight; y++) 
 		{
